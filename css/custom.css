@@ -30,9 +30,18 @@ nav li {
     margin-right: 60px;
 }
 
+.banner-container{
+    max-width: 1440px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
 .banner{
+    background-image: url("../assets/main-banner-1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     height: 723px;
-    width: 1440px;
 }
 
 footer{
@@ -66,5 +75,13 @@ footer > * {
     .navbar-light .navbar-toggler {
         border: none;
         text-align: right;
+    }
+
+    button:focus {
+        outline: none
+    }
+
+    .banner{
+        height: 470px;
     }
 }
