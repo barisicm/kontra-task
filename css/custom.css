@@ -44,6 +44,22 @@ nav li {
     height: 723px;
 }
 
+
+.footer-closing{
+    background-color: #0d2b51;
+    color: white;
+    padding-top: 85px;
+}
+
+.footer-logo{
+    width: 180px;
+    height: 92px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-bottom: 76px;
+}
+
 footer{
     background-color: #04101e;
     min-height: 80px;
