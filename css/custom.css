@@ -52,6 +52,13 @@ footer{
 footer > * {
     color:#ffffff;
     margin: 0;
+    font-family: "HelveticaNeue";
+    font-size: 12px;
+    opacity: 0.33;
+}
+
+footer p {
+    margin-bottom: 0px;
 }
 
 @media (min-width: 1200px) {
@@ -83,5 +90,11 @@ footer > * {
 
     .banner{
         height: 470px;
+    }
+}
+
+@media (max-width:768px){
+    footer{
+        min-height: 103px;
     }
 }
