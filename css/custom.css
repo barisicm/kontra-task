@@ -48,6 +48,46 @@ nav li {
     height: 723px;
 }
 
+.contact {
+    min-height: 150px;
+    top: -75px;
+    position: relative;
+    padding: 34px 0 41px 0;
+    background-color: white;
+    box-shadow: 0 7px 40px 5px rgba(0, 0, 0, 0.03);
+    border: solid 1px rgba(70, 64, 64, 0.2);
+}
+
+.contact div:first-child{
+    padding-left: 60px;
+}
+
+.contact div:last-child{
+    padding-right: 30px;
+}
+
+.send-req{
+    width: 240px;
+    height: 100px;
+    border: solid 1px #0d2b51;
+    background-color: #0d2b51;
+    font-size: 16px;
+    letter-spacing: 0.2px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.stylish{
+    font-family: CormorantGaramond;
+    font-size: 54px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.04;
+    letter-spacing: -0.5px;
+    color: #0d2b51;
+}
+
 .sub-h{
     line-height: 2.08;
     opacity: 0.34;
@@ -69,6 +109,7 @@ nav li {
     padding-top: 85px;
     padding-bottom: 72px;
 }
+
 
 .go-up{
     width: 20px;
@@ -157,6 +198,19 @@ footer p {
 
     .go-up{
         bottom: 106px;
+    }
+
+    .contact div:first-child{
+        padding-left: 15px;
+        padding-bottom: 34px;
+    }
+    
+    .contact div:last-child{
+        padding-right: 15px;
+    }
+
+    .stylish{
+        font-size: 31px;
     }
 }
 
