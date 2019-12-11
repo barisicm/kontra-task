@@ -6,6 +6,10 @@ body{
     font-style: normal;
 }
 
+p{
+    margin: 0;
+}
+
 nav{
     min-height: 100px;
     margin-bottom: -40px;
@@ -44,11 +48,34 @@ nav li {
     height: 723px;
 }
 
+.sub-h{
+    line-height: 2.08;
+    opacity: 0.34;
+    font-size: 12px;
+}
+
+.footer-closing p{
+    font-size: 15px;
+    line-height: 1.67;
+}
+
+.footer-closing a{
+    color:white;
+}
 
 .footer-closing{
     background-color: #0d2b51;
     color: white;
     padding-top: 85px;
+    padding-bottom: 72px;
+}
+
+.go-up{
+    width: 20px;
+    height: 50px;
+    position: relative;
+    bottom: 57px;
+    left: 100%;
 }
 
 .footer-logo{
@@ -83,6 +110,26 @@ footer p {
     }   
 }
 
+@media (min-width:992px){
+    .m-b-46{
+        margin-bottom: 46px!important;
+    }
+    
+    .m-b-56{
+        margin-bottom: 56px!important;
+    }
+}
+
+@media (max-width:992px) and (min-width:768px){
+    .m-b-41{
+        margin-bottom: 41px!important;
+    }
+
+    .m-b-53{
+        margin-bottom: 53px!important;
+    }
+}
+
 @media (max-width:992px){
     nav{
         min-height: 60px;
@@ -107,10 +154,22 @@ footer p {
     .banner{
         height: 470px;
     }
+
+    .go-up{
+        bottom: 106px;
+    }
 }
 
 @media (max-width:768px){
+    .go-up{
+        bottom: -30px;
+        left: 50%;
+    }
+    
     footer{
         min-height: 103px;
     }
 }
+
+
+/*Utility classes*/
