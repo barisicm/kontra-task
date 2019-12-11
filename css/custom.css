@@ -32,6 +32,10 @@ nav li {
     line-height: 25px;
     letter-spacing: 0.5px;
 }
+.article-text{
+    font-size: 14px;
+    line-height: 1.93;
+}
 
 .logo {
     background: url("../assets/logo.svg") no-repeat 0 50%;
@@ -178,6 +182,15 @@ footer p {
     margin-bottom: 28px;
 }
 
+.hr-main{
+    width: 1440px;
+}
+
+.description{
+    margin-top: 93px;
+    margin-bottom: 96px;
+}
+
 .gallery-heading-height{
     height: 114px;
     margin-bottom: 36px;
@@ -186,6 +199,47 @@ footer p {
 .gallery-main{
     width: 803px;
     height: 560px;
+    margin-bottom: 20px;
+}
+
+.gallery-item{
+    width: 110px;
+    height: 80px;
+    margin-right: 10px;
+}
+
+.gallery-item:last-of-type{
+    margin-right: 76px;
+}
+
+.gallery-controls{
+    width: 32px;
+}
+
+.gallery-controls img{
+    width: 32px;
+    height: 32px;
+    margin: 4px;
+}
+
+.numbering{
+    position: relative;
+    top: -15px;
+}
+
+.pdf{
+    width: 155px;
+    height: 48px;
+    background-color: #ffffff;
+    border: solid 1px #bfbfbf;
+    font-size: 12px;
+  font-weight: bold;
+  letter-spacing: -0.2px;
+
+}
+
+.description .row div:last-of-type{
+    padding-left: 45px;
 }
 
 @media (min-width: 1200px) {
@@ -272,4 +326,16 @@ footer p {
 /*Utility classes*/
 .p-b-16{
     padding-bottom: 1.6rem!important;
+}
+
+.m-b-32{
+    margin-bottom: 3.2rem!important;
+}
+
+.m-t-34{
+    margin-top: 34px!important
+}
+
+.p-l-59px{
+    padding-left: 59px!important;
 }
