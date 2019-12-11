@@ -1,9 +1,15 @@
 body{
-    font-family: "HelveticaNeue";
     line-height: 1.67;
     font-weight: normal;
     font-stretch: normal;
     font-style: normal;
+}
+
+h2{
+    font-size: 31px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    display: contents;
 }
 
 p{
@@ -78,6 +84,7 @@ nav li {
 }
 
 .stylish{
+    margin: 0;
     font-family: CormorantGaramond;
     font-size: 54px;
     font-weight: 500;
@@ -90,9 +97,26 @@ nav li {
 
 .sub-h{
     line-height: 2.08;
-    opacity: 0.34;
     font-size: 12px;
 }
+
+.footer-opacity{
+    opacity: 0.34;
+}
+
+.sub-data{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.sub-data-big{
+    font-size: 22px;
+    font-weight: bold;
+    position: relative;
+    top: -5px;
+    margin-bottom: 5px;
+}
+
 
 .footer-closing p{
     font-size: 15px;
@@ -136,13 +160,32 @@ footer{
 footer > * {
     color:#ffffff;
     margin: 0;
-    font-family: "HelveticaNeue";
     font-size: 12px;
     opacity: 0.33;
 }
 
 footer p {
     margin-bottom: 0px;
+}
+
+.article-hr-margin-1{
+    margin-top: 36px;
+    margin-bottom: 28px;
+}
+
+.article-hr-margin-2{
+    margin-top: 15px;
+    margin-bottom: 28px;
+}
+
+.gallery-heading-height{
+    height: 114px;
+    margin-bottom: 36px;
+}
+
+.gallery-main{
+    width: 803px;
+    height: 560px;
 }
 
 @media (min-width: 1200px) {
@@ -227,3 +270,6 @@ footer p {
 
 
 /*Utility classes*/
+.p-b-16{
+    padding-bottom: 1.6rem!important;
+}
