@@ -70,7 +70,7 @@
 
     <section class="container">
         <div class="row">
-            <div class="col-12 col-lg-5 pr-lg-5">
+            <div class="col-12 col-lg-5 pr-lg-5 order-1 order-lg-0">
                 <h2>OSNOVNE<br>SPECIFIKACIJE<br>
                     PLOVILA</h2>
                 <hr class="article-hr-margin-1">
@@ -142,9 +142,9 @@
                 <button class="pdf">PREUZMI PDF</button>
             </div>
 
-            <div class="col-12 col-lg-7 pr-lg-0">
+            <div class="col-12 col-lg-7 pr-lg-0 order-0 order-lg-1 m-b-60">
                 <div class="row gallery-heading-height align-items-end">
-                    <div class="col-12 col-lg-6">
+                    <div class="col-12 col-lg-6 pb-4 pb-lg-0">
                         <p class="sub-h">Bazirana u</p>
                         <p class="sub-data">Marina Mandalina, <br>
                             Šibenik-Dalmacija, Hrvatska</p>
@@ -155,14 +155,16 @@
                     </div>
                 </div>
                 <div class="gallery-main">
-                    <img src="./assets/gallery-main-1.jpg" alt="" style="height: 100%;width: 100%;">
+                    <img src="./assets/gallery-main-1.jpg" alt="">
                 </div>
-                <div class="gallery d-flex">
-                    <img src="./assets/gallery-below-1-1.jpg" class="gallery-item" alt="">
-                    <img src="./assets/gallery-below-2-1.jpg" class="gallery-item" alt="">
-                    <img src="./assets/gallery-below-3-1.jpg" class="gallery-item" alt="">
+                <div class="gallery d-lg-flex">
+                    <div class="d-none d-lg-block">
+                        <img src="./assets/gallery-below-1-1.jpg" class="gallery-item" alt="">
+                        <img src="./assets/gallery-below-2-1.jpg" class="gallery-item" alt="">
+                        <img src="./assets/gallery-below-3-1.jpg" class="gallery-item" alt="">
 
-                    <div class="gallery-controls column justify-content-between">
+                    </div>    
+                    <div class="gallery-controls column justify-content-between m-auto m-lg-0">
                         <img src="/assets/arrow-right.svg" alt="Right">
                         <img src="/assets/arrow-left.svg" alt="Left">
                     </div>
@@ -189,7 +191,7 @@
                 Vulputate mi sit amet mauris commodo quis. Nibh mauris cursus mattis molestie a iaculis at erat. Lectus
                 urna duis convallis convallis. Dui nunc mattis enim ut tellus mattis enim ut elementum.
             </div>
-            <div class="col-12 col-lg-4 article-text">
+            <div class="col-12 col-lg-4 article-text ">
                 Elit ullamcorper dignissim cras tincidunt lobortis. Dapibus ultrices in iaculis nunc. Lobortis feugiat
                 vivamus at augue eget. Molestie nunc non blandit massa enim nec dui nunc mattis. Facilisis volutpat est
                 velit egestas dui id ornare arcu consectetur adipiscing. <br><br>
@@ -204,7 +206,7 @@
     <!-- Dodatci -->
     <section class="container additions">
         <div class="row row-custom-position">
-            <div class="col-12 col-lg-4 additions-bg mr-0 mr-lg-2">
+            <div class="col-12 col-lg-4 additions-bg mr-0 mr-lg-2 mb-2 mb-lg-0">
                 <h2>OBAVEZNI<br>DODACI</h2>
                 <div class="row">
                     <div class="col-6 col-lg-5 column p-0">
@@ -237,7 +239,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-lg-4 additions-bg mr-0 mr-lg-2">
+            <div class="col-12 col-lg-4 additions-bg mr-0 mr-lg-2 mb-2 mb-lg-0">
                 <h2>NEOBAVEZNI<br>DODACI</h2>
                 <div class="row">
                     <div class="col-6 col-lg-5 column p-0">
@@ -318,12 +320,12 @@
             <div class="col-12 col-lg-6 p-0">
                 <img class="w-100" src="./assets/exterior-oc-38-1-2018-adriatic-challeng-5.jpg" alt="">
             </div>
-            <div class="col-12 col-lg-6 variants-side-container p-0 " style="position: relative;">
-                <div class="p-l-59px" style="position: absolute; top:-10px">
+            <div class="col-12 col-lg-6 variants-side-container p-0 position-lg-relative">
+                <div class="p-l-59px numbering-2">
                     <span>02</span>
                 </div>
                 <h1 class="stylish title-position">Varijanta 44</h1>
-                <div class="p-l-59px" style="position: absolute;bottom: 52px;">
+                <div class="p-l-59px years">
                     <span>2014</span>
                 </div>
                 <div class="arrow-container">
@@ -407,6 +409,61 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
     </script>
+
+
+<script>
+        //CAROUSEL
+        var counter = 0;
+    var slider = {
+
+        self: this,
+
+        arrows: $('.arrow'),
+        thumbnailImg: $('.dd-thumbnail'),
+
+        init: function () {
+            this.arrows.on('click', this.slide);
+            this.thumbnailImg.on('click', this.thumbClick);
+        },
+        slide: function (id) {
+            let arrowName = $(this).attr('class');
+            let picLength = $('.dd-thumbs-container .dd-thumbnail').length; //4
+
+            if (arrowName === 'arrow arrow-left') {
+                console.log("clicked left")
+                counter--;
+                if (counter < 0) {
+                    counter = picLength - 1;
+                }
+                let currentImg = $('.dd-thumbs-container .dd-thumbnail').eq(counter).find('img').clone(); //clone current element
+                $('.dd-mainimage-container').find('img').detach(); //remove current picture
+                $(currentImg).insertAfter($('.dd-mainimage-container .arrow-right')); //insert next picture to current element 
+                console.log(counter);
+            } else {
+                console.log("clicked right");
+                counter++;
+                if (counter >= picLength) {
+                    counter = 0;
+                }
+                let currentImg = $('.dd-thumbs-container .dd-thumbnail').eq(counter).find('img').clone(); //clone current element
+                $('.dd-mainimage-container').find('img').detach(); //remove current picture
+                $(currentImg).insertAfter($('.dd-mainimage-container .arrow-right')); //insert next picture to current element 
+            }
+        },
+        thumbClick: function () {
+            let items = $('.dd-thumbs-container .dd-thumbnail');
+            var index = items.index($(this));
+
+            let cloneImg = $(this).find('img').clone();
+            $('.dd-mainimage-container').find('img').detach();
+            $(cloneImg).insertAfter($('.dd-mainimage-container .arrow-right'));
+            counter = index;
+        }
+
+    };
+
+    slider.init();
+</script>
 </body>
 
 </html>
