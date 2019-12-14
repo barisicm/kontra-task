@@ -477,8 +477,12 @@ footer p {
         margin-top: 39px;
     }
 
-    section.p-l-59px {
+    section.p-l-59px, div.p-l-59px {
         padding-left: 15px !important;
+    }
+
+    section.p-l-119px{
+        padding-left: 15px!important;
     }
 
     .description {
@@ -572,6 +576,10 @@ footer p {
 
 .m-b-32 {
     margin-bottom: 32px !important;
+}
+
+.p-l-119px{
+    padding-left: 119px !important;
 }
 
 .w-100 {

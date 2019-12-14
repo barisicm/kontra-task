@@ -10,10 +10,6 @@ gulp.task('serve', function() {
     browserSync.init({
         server: {
             baseDir:'./dist'
-        },
-        middleware: function(req, res, next) {
-            res.setHeader("Content-Encoding", "gzip");
-            next();
         }
     });
 
