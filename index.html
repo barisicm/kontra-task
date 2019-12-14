@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/custom.css">
 </head>
 
@@ -61,7 +60,7 @@
                 <h1 class="stylish">Hanse 445</h1>
             </div>
             <div class="col-12 col-lg-4 text-center text-lg-right">
-                <button class="send-req">Pošalji upit</button>
+                <button class="send-req button-animation">Pošalji upit</button>
             </div>
         </div>
     </section>
@@ -139,7 +138,7 @@
                         </div>
                     </div>
                 </div>
-                <button class="pdf m-t-32">PREUZMI PDF</button>
+                <button class="pdf m-t-32 button-animation">PREUZMI PDF</button>
             </div>
 
             <div class="col-12 col-lg-7 pr-lg-0 order-0 order-lg-1 m-b-60">
@@ -158,27 +157,27 @@
                     <img src="./assets/gallery-main-1.jpg" alt="">
                 </div>
                 <div class="gallery d-lg-flex">
-                    <div class="d-none d-lg-block">
+                    <div class="d-none d-lg-block gallery-items-container">
                         <img src="./assets/gallery-below-1-1.jpg" class="gallery-item" alt="">
                         <img src="./assets/gallery-below-2-1.jpg" class="gallery-item" alt="">
                         <img src="./assets/gallery-below-3-1.jpg" class="gallery-item" alt="">
 
-                    </div>    
+                    </div>
                     <div class="gallery-controls column justify-content-between m-auto m-lg-0">
-                        <img src="/assets/arrow-right.svg" alt="Right">
-                        <img src="/assets/arrow-left.svg" alt="Left">
+                        <img src="/assets/arrow-right.svg" alt="Right"
+                            class="arrow arrow-right clickable button-animation no-shadow">
+                        <img src="/assets/arrow-left.svg" alt="Left"
+                            class="arrow arrow-left clickable button-animation no-shadow">
                     </div>
 
                 </div>
                 <div class="numbering float-right">
-                    <p><span>01</span> / <span>14</span></p>
+                    <p><span class="counter">01</span> / <span>14</span></p>
                 </div>
             </div>
         </div>
         <hr class="hr-main hr-spec">
     </section>
-
-
     <!-- Opis plovila -->
     <section class="container description p-l-59px">
         <h2>Opis plovila</h2>
@@ -202,7 +201,6 @@
             </div>
         </div>
     </section>
-
     <!-- Dodatci -->
     <section class="container additions">
         <div class="row row-custom-position">
@@ -293,8 +291,6 @@
             </div>
         </div>
     </section>
-
-
     <section class="container payment-type">
         <div class="mb-4 mb-lg-0 p-l-59px m-b-32">
             <p class="sub-h pb-1">Depozit</p>
@@ -303,17 +299,14 @@
         </div>
         <hr>
     </section>
-
     <section class="container contact-me">
         <div class="row d-flex justify-content-center">
             <div class="rectangle m-auto text-center">
                 <h1 class="stylish p-b-42">Hanse 445</h1>
-                <button class="send-req btn-large">POŠALJI UPIT</button>
+                <button class="send-req btn-large button-animation">POŠALJI UPIT</button>
             </div>
         </div>
     </section>
-
-
     <!-- varijante -->
     <section class="container mw-1440">
         <div class="row p-0">
@@ -328,14 +321,12 @@
                 <div class="p-l-59px years">
                     <span>2014</span>
                 </div>
-                <div class="arrow-container">
+                <div class="arrow-container clickable button-animation no-shadow">
                     <img src="/assets/arrow-right.svg" alt="Right">
                 </div>
             </div>
         </div>
     </section>
-
-
     <!-- Footer closing -->
     <div class="footer-closing container-fluid">
         <img src="./assets/footer-logo.svg" class="footer-logo" alt="">
@@ -384,7 +375,7 @@
                     </div>
                 </div>
             </div>
-            <div class="go-up">
+            <div class="go-up clickable button-animation no-shadow">
                 <img src="/assets/go-up.svg" alt="Scroll To Top">
                 <p class="sub-h footer-opacity d-none d-md-block">up</p>
             </div>
@@ -400,70 +391,10 @@
     </footer>
 
 
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-    </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
-    </script>
-
-
-<script>
-        //CAROUSEL
-        var counter = 0;
-    var slider = {
-
-        self: this,
-
-        arrows: $('.arrow'),
-        thumbnailImg: $('.dd-thumbnail'),
-
-        init: function () {
-            this.arrows.on('click', this.slide);
-            this.thumbnailImg.on('click', this.thumbClick);
-        },
-        slide: function (id) {
-            let arrowName = $(this).attr('class');
-            let picLength = $('.dd-thumbs-container .dd-thumbnail').length; //4
-
-            if (arrowName === 'arrow arrow-left') {
-                console.log("clicked left")
-                counter--;
-                if (counter < 0) {
-                    counter = picLength - 1;
-                }
-                let currentImg = $('.dd-thumbs-container .dd-thumbnail').eq(counter).find('img').clone(); //clone current element
-                $('.dd-mainimage-container').find('img').detach(); //remove current picture
-                $(currentImg).insertAfter($('.dd-mainimage-container .arrow-right')); //insert next picture to current element 
-                console.log(counter);
-            } else {
-                console.log("clicked right");
-                counter++;
-                if (counter >= picLength) {
-                    counter = 0;
-                }
-                let currentImg = $('.dd-thumbs-container .dd-thumbnail').eq(counter).find('img').clone(); //clone current element
-                $('.dd-mainimage-container').find('img').detach(); //remove current picture
-                $(currentImg).insertAfter($('.dd-mainimage-container .arrow-right')); //insert next picture to current element 
-            }
-        },
-        thumbClick: function () {
-            let items = $('.dd-thumbs-container .dd-thumbnail');
-            var index = items.index($(this));
-
-            let cloneImg = $(this).find('img').clone();
-            $('.dd-mainimage-container').find('img').detach();
-            $(cloneImg).insertAfter($('.dd-mainimage-container .arrow-right'));
-            counter = index;
-        }
-
-    };
-
-    slider.init();
-</script>
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/js/bootstrap.min.js"></script>
+    <script src="./js/interactions.js"></script>
 </body>
 
 </html>
